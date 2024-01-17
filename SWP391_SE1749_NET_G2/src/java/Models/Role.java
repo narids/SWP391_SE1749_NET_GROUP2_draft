@@ -6,8 +6,8 @@ package Models;
 
 /**
  *
- * @author nghia
+ * @author User
  */
-public class NewClass {
+public class Role {
     
 }
