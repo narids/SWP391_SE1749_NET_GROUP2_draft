@@ -1,6 +1,4 @@
-
 package Models;
-
 import java.util.Date;
 
 /**
@@ -9,66 +7,72 @@ import java.util.Date;
  * date 18/01/2024
  */
 public class Quiz {
-    /*Entity
-    Table(name = "Quiz")
-    */
-    //GeneratedValue(strategy = GenerationType.IDENTITY)
-    //Column(name = "QuizID")
-    private int quizId;
+    private int QuizID;
+    private int QuestionID;
+    private String Quiz_Content;
+    private Date Created_Day;
+    private int SubjectID;
     
-    //Column(name = "QuestionID")
-    private int questionId;
+    public Quiz(){
+        
+    }
     
-    //Column(name = "Quiz_Content")
-    private String quizContent;
+   // Constructor
+    public Quiz(int QuizID, int QuestionID, String Quiz_Content, Date Created_Day, int SubjectID) {
+        this.QuizID = QuizID;
+        this.QuestionID = QuestionID;
+        this.Quiz_Content = Quiz_Content;
+        this.Created_Day = Created_Day;
+        this.SubjectID = SubjectID;
+    }
+        
     
-    //Column(name = "Created_Day")
-    private Date createdDay;
-    
-    //Column(name = "SubjectID")
-    private int subjectId;
-
     // getters and setters
 
-    public int getQuizId() {
-        return quizId;
+    public int getQuizID() {
+        return QuizID;
     }
 
-    public void setQuizId(int quizId) {
-        this.quizId = quizId;
+    public void setQuizID(int QuizID) {
+        this.QuizID = QuizID;
     }
 
-    public int getQuestionId() {
-        return questionId;
+    public int getQuestionID() {
+        return QuestionID;
     }
 
-    public void setQuestionId(int questionId) {
-        this.questionId = questionId;
+    public void setQuestionID(int QuestionID) {
+        this.QuestionID = QuestionID;
     }
 
-    public String getQuizContent() {
-        return quizContent;
+    public String getQuiz_Content() {
+        return Quiz_Content;
     }
 
-    public void setQuizContent(String quizContent) {
-        this.quizContent = quizContent;
+    public void setQuiz_Content(String Quiz_Content) {
+        this.Quiz_Content = Quiz_Content;
     }
 
-    public Date getCreatedDay() {
-        return createdDay;
+    public Date getCreated_Day() {
+        return Created_Day;
     }
 
-    public void setCreatedDay(Date createdDay) {
-        this.createdDay = createdDay;
+    public void setCreated_Day(Date Created_Day) {
+        this.Created_Day = Created_Day;
     }
 
-    public int getSubjectId() {
-        return subjectId;
+    public int getSubjectID() {
+        return SubjectID;
     }
 
-    public void setSubjectId(int subjectId) {
-        this.subjectId = subjectId;
+    public void setSubjectID(int SubjectID) {
+        this.SubjectID = SubjectID;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Quiz{" + "QuizID=" + QuizID + ", QuestionID=" + QuestionID + ", Quiz_Content=" + Quiz_Content + ", Created_Day=" + Created_Day + ", SubjectID=" + SubjectID + '}';
+    }
+
 
 }
